@@ -32,10 +32,13 @@ export function PromptInput({ onSubmit, isLoading }: PromptInputProps) {
     <div className="w-full max-w-3xl mx-auto animate-fade-in">
       <div className="text-center mb-8">
         <h2 className="text-3xl sm:text-4xl font-bold mb-3">
-          <span className="gradient-text glow-text">Which AI thinks better?</span>
+          <span className="gradient-text glow-text">Blind AI Comparison</span>
         </h2>
         <p className="text-muted-foreground text-lg">
-          Enter a prompt and vote for the best response. Models are revealed after voting.
+          Two models. Anonymous responses. Your unbiased vote decides.
+        </p>
+        <p className="text-muted-foreground/60 text-sm mt-1">
+          No account needed • Vote once per battle • Models revealed after
         </p>
       </div>
 
