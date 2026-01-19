@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Send, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import { ClaudeChatInput } from "./ui/claude-style-chat-input";
 
 interface PromptInputProps {
   onSubmit: (prompt: string) => void;
@@ -15,17 +15,20 @@ const EXAMPLE_PROMPTS = [
 ];
 
 export function PromptInput({ onSubmit, isLoading }: PromptInputProps) {
-  const [prompt, setPrompt] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (prompt.trim() && !isLoading) {
-      onSubmit(prompt.trim());
+  const handleSendMessage = (data: {
+    message: string;
+    files: unknown[];
+    pastedContent: unknown[];
+    model: string;
+    isThinkingEnabled: boolean;
+  }) => {
+    if (data.message.trim() && !isLoading) {
+      onSubmit(data.message.trim());
     }
   };
 
   const handleExampleClick = (example: string) => {
-    setPrompt(example);
+    onSubmit(example);
   };
 
   return (
@@ -42,34 +45,7 @@ export function PromptInput({ onSubmit, isLoading }: PromptInputProps) {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="relative group">
-          <textarea
-            value={prompt}
-            onChange={(e) => setPrompt(e.target.value)}
-            placeholder="Ask anything... Compare explanations, writing styles, or problem-solving approaches"
-            className="input-arena min-h-[120px] resize-none pr-14"
-            disabled={isLoading}
-            rows={3}
-          />
-          <button
-            type="submit"
-            disabled={!prompt.trim() || isLoading}
-            className="absolute right-3 bottom-3 btn-primary !p-3 !rounded-lg"
-            aria-label="Start battle"
-          >
-            {isLoading ? (
-              <div className="typing-dots">
-                <span />
-                <span />
-                <span />
-              </div>
-            ) : (
-              <Send className="h-5 w-5" />
-            )}
-          </button>
-        </div>
-      </form>
+      <ClaudeChatInput onSendMessage={handleSendMessage} />
 
       <div className="mt-6">
         <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
