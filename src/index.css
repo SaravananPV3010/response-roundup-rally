@@ -63,11 +63,43 @@
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 222 30% 18%;
     --sidebar-ring: 174 72% 50%;
+
+    /* Claude Design System Tokens */
+    --claude-bg-0: 48 33% 97%;
+    --claude-bg-000: 48 33% 97%;
+    --claude-bg-100: 0 0% 100%;
+    --claude-bg-200: 45 24% 92%;
+    --claude-bg-300: 0 0% 87%;
+    --claude-text-100: 30 4% 12%;
+    --claude-text-200: 60 2% 24%;
+    --claude-text-300: 43 3% 44%;
+    --claude-text-400: 0 0% 53%;
+    --claude-text-500: 0 0% 60%;
+    --claude-accent: 16 62% 59%;
+    --claude-accent-hover: 16 55% 51%;
+    --ease-silk: cubic-bezier(0.2, 0.0, 0, 1.0);
+    --shadow-claude-input: 0 1px 2px -1px rgba(0, 0, 0, 0.08), 0 2px 8px -2px rgba(0, 0, 0, 0.04);
+    --shadow-claude-input-hover: 0 1px 2px -1px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.08);
+    --shadow-claude-input-focus: 0 0 0 2px rgba(217, 119, 87, 0.1), 0 4px 12px -2px rgba(0, 0, 0, 0.08);
   }
 
   .dark {
     --background: 222 47% 6%;
     --foreground: 210 40% 98%;
+
+    /* Claude Dark Mode Tokens */
+    --claude-bg-0: 0 0% 13%;
+    --claude-bg-000: 0 0% 13%;
+    --claude-bg-100: 40 3% 15%;
+    --claude-bg-200: 48 3% 19%;
+    --claude-bg-300: 48 3% 26%;
+    --claude-text-100: 0 0% 93%;
+    --claude-text-200: 40 2% 88%;
+    --claude-text-300: 0 0% 71%;
+    --claude-text-400: 45 2% 54%;
+    --claude-text-500: 48 4% 42%;
+    --claude-accent: 28 53% 63%;
+    --claude-accent-hover: 28 59% 70%;
   }
 }
 
