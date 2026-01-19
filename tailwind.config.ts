@@ -64,11 +64,31 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Claude Design System
+        claude: {
+          "bg-0": "hsl(var(--claude-bg-0))",
+          "bg-000": "hsl(var(--claude-bg-000))",
+          "bg-100": "hsl(var(--claude-bg-100))",
+          "bg-200": "hsl(var(--claude-bg-200))",
+          "bg-300": "hsl(var(--claude-bg-300))",
+          "text-100": "hsl(var(--claude-text-100))",
+          "text-200": "hsl(var(--claude-text-200))",
+          "text-300": "hsl(var(--claude-text-300))",
+          "text-400": "hsl(var(--claude-text-400))",
+          "text-500": "hsl(var(--claude-text-500))",
+          accent: "hsl(var(--claude-accent))",
+          "accent-hover": "hsl(var(--claude-accent-hover))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        "claude-input": "var(--shadow-claude-input)",
+        "claude-input-hover": "var(--shadow-claude-input-hover)",
+        "claude-input-focus": "var(--shadow-claude-input-focus)",
       },
       keyframes: {
         "accordion-down": {
